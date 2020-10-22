@@ -9,3 +9,8 @@ resource "aws_instance" "VK_instance1" {
     Name = "VK2"
   }
 }
+
+output "public_ip_vk2" {
+  value = aws_instance.vk_instance.public_ip
+  description = "Display Public IP of instance"
+}
